@@ -1,4 +1,4 @@
-grpc Create Poll
+gRPC Create Poll
 ==============================================
 
 To run the poll Service, execute one of the gradle tasks `pollServiceServer`,
