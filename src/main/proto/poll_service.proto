@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package edu.sjsu.cmpe273.lab2;
+
+option java_multiple_files = true;
+option java_package= "edu.sjsu.cmpe273.lab2";
+option java_outer_classname= "PollServiceProto";
+
+service PollService{
+	//rpc post(Poll) returns (Poll);
+	rpc CreatePoll(PollRequest) returns (PollResponse){}
+}
+
+message PollRequest{
+	string moderatorId = 1;
+	string question = 2;
+	string started_at = 3;
+	string expired_at = 4;
+	repeated string choice = 5;  
+	//optional Choice results = 6;	
+}
+
+message PollResponse{
+	string id = 1;
+}
